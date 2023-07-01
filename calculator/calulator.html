@@ -1,0 +1,168 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+   <body>
+    <div class="container">     
+         <u>    <h1 style="text-align: center; text-transform:capitalize ; font-style: italic;">calculator </h1> </u>
+          <div>
+            <div class="row">
+                <input class=" input" type="text" placeholder="0" id="content" />
+            </div>
+            <div class="row">
+                <Button class="button operator">AC</Button>
+                <Button class="button operator">%</Button>
+                <Button class="button operator">M-</Button>
+                <Button class="button operator">/</Button>
+            </div>
+            <div class="row">
+                <Button class="button">7</Button>
+                <Button class="button">8</Button>
+                <Button class="button">9</Button>
+                <Button class="button operator">*</Button>
+            </div>
+                <div class="row">
+                <Button class="button">4</Button>
+                <Button class="button">5</Button>
+                <Button class="button">6</Button>
+                <Button class="button operator">+</Button>
+            </div>
+            <div class="row">
+                <Button class="button">1</Button>          
+                <Button class="button">2</Button> 
+                <Button class="button">3</Button>
+                <Button class="button operator">-</Button>
+            </div>
+            <div class="row">
+                <Button class="button">0</Button>
+                <Button class="button">root</Button>
+                <Button class="button operator">.</Button>
+                  <Button class="button result">=</Button>
+                 
+                 
+                
+            </div>
+          </div> 
+        </div>
+
+        </body>
+  <script>
+let string="";
+let buttons=document.querySelectorAll('.button');
+Array.from(buttons).forEach((button)=>{
+    button.addEventListener('click',(e)=>{
+        if(e.target.innerHTML=='='){
+            string=eval(string);
+            document.querySelector('input').value=string;
+        }
+        else if(e.target.innerHTML=='AC'){
+            string=" ";
+            document.querySelector('input').value=string;
+        }
+        else if(e.target.innerHTML=='M-'){
+           
+            string = string.substring(0, string.length-1);
+            document.querySelector('input').value = string;
+        }
+        else if(e.target.innerHTML=='root'){
+            string=Math.sqrt(string);
+            document.querySelector('input').value=string;
+        }
+        
+        else{
+        string+=e.target.innerHTML;
+        document.querySelector('input').value=string;}
+    })
+
+})
+  </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+   <body>
+    <div class="container">     
+         <u>    <h1 style="text-align: center; text-transform:capitalize ; font-style: italic;">calculator </h1> </u>
+          <div>
+            <div class="row">
+                <input class=" input" type="text" placeholder="0" id="content" />
+            </div>
+            <div class="row">
+                <Button class="button operator">AC</Button>
+                <Button class="button operator">%</Button>
+                <Button class="button operator">M-</Button>
+                <Button class="button operator">/</Button>
+            </div>
+            <div class="row">
+                <Button class="button">7</Button>
+                <Button class="button">8</Button>
+                <Button class="button">9</Button>
+                <Button class="button operator">*</Button>
+            </div>
+                <div class="row">
+                <Button class="button">4</Button>
+                <Button class="button">5</Button>
+                <Button class="button">6</Button>
+                <Button class="button operator">+</Button>
+            </div>
+            <div class="row">
+                <Button class="button">1</Button>          
+                <Button class="button">2</Button> 
+                <Button class="button">3</Button>
+                <Button class="button operator">-</Button>
+            </div>
+            <div class="row">
+                <Button class="button">0</Button>
+                <Button class="button">00</Button>
+                <Button class="button operator">.</Button>
+                  <Button class="button result">=</Button>
+                 
+                 
+                
+            </div>
+          </div> 
+        </div>
+
+        </body>
+  <script>
+let string="";
+let buttons=document.querySelectorAll('.button');
+Array.from(buttons).forEach((button)=>{
+    button.addEventListener('click',(e)=>{
+        if(e.target.innerHTML=='='){
+            string=eval(string);
+            document.querySelector('input').value=string;
+        }
+        else if(e.target.innerHTML=='AC'){
+            string=" ";
+            document.querySelector('input').value=string;
+        }
+        else if(e.target.innerHTML=='M-'){
+           
+            string = string.substring(0, string.length-1);
+            document.querySelector('input').value = string;
+        }
+        
+        else{
+        string+=e.target.innerHTML;
+        document.querySelector('input').value=string;}
+    })
+
+})
+  </script>
+>>>>>>> 6913def944eb06d6aab968e94a8427201846463f
+</html>
